@@ -1,0 +1,42 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://example.com/example.json",
+    "title": "argowf",
+    "description": "A custom schema for Argo Workflow resources",
+    "type": "object",
+    "properties": {
+        "apiVersion": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "generateName": {
+              "type": "string"
+            }
+          }
+        },
+        "spec": {
+          "type": "object",
+          "properties": {
+            "securityContext": {
+              "type": "object",
+              "properties": {
+                "runAsNonRoot": {
+                  "type": "boolean"
+                },
+                "path": {
+                  "runAsUser": "string"
+                }
+              }
+            },
+            "serviceAccountName": {
+              "type": "string"
+            }
+          }   
+        }
+    }
+}
