@@ -16,7 +16,7 @@ import future.keywords.in
 
 allowed_images :=  {
     ["node:21-alpine3.19", "as", "build-deps"],
-    ["nginx:1.2"]
+    ["nginx:1.24"]
 }
 
 deny[msg] {
